@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyöstin Galleria</title>
+    <style>
+        /* Tuodaan kaunokirjoitusfontti Google Fontsista */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f0ff; /* Vaalea sininen tausta */
+            color: #333;
+        }
+
+        /* Yläpalkki */
+        header {
+            background: linear-gradient(135deg, #003366, #336699); /* Sininen liukuväri */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Kyöstin nimi kaunofontilla */
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        /* Navigointi */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Pääsisältö */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Taustakuvat eri sivuille */
+        body.galleria {
+            background: url('img/galleria-tausta.jpg') no-repeat center center/cover;
+        }
+
+        /* Galleriakuvat */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 20px;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body class="galleria">
+    <header>
+        <h1>Kyöstin Galleria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="gallery.html">Galleria</a></li>
+                <li><a href="kisahistoria.html">Kisahistoria</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Kyöstin kuvat</h2>
+        <div class="gallery-grid">
+            <img src="images/Kyosti1.jpeg" alt="Kyösti 1">
+            <img src="images/Kyosti2.jpeg" alt="Kyösti 2">
+            <img src="images/Kyosti3.jpeg" alt="Kyösti 3">
+            <img src="images/Kyosti4.jpeg" alt="Kyösti 4">
+            <img src="images/Kyosti5.jpeg" alt="Kyösti 5">
+            <img src="images/Kyosti6.jpeg" alt="Kyösti 6">
+            <img src="images/Kyosti7.jpeg" alt="Kyösti 7">
+            <img src="images/Kyosti8.jpeg" alt="Kyösti 8">
+            <img src="images/Kyosti9.jpeg" alt="Kyösti 9">
+            <img src="images/Kyosti10.jpeg" alt="Kyösti 10">
+            <img src="images/Kyosti11.jpeg" alt="Kyösti 11">
+            <img src="images/Kyosti12.jpeg" alt="Kyösti 12">
+            <img src="images/Kyosti13.jpeg" alt="Kyösti 13">
+            <img src="images/Kyosti14.jpeg" alt="Kyösti 14">
+            <img src="images/Kyosti15.jpeg" alt="Kyösti 15">
+            <img src="images/Kyostijamyy.jpeg" alt="Kyösti 16">
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Kyöstin kotisivut</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,127 @@
+/* Tuodaan kaunokirjoitusfontti Google Fontsista */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f0ff; /* Vaalea sininen tausta */
+    color: #333;
+}
+
+/* Yläpalkki */
+header {
+    background: linear-gradient(135deg, #003366, #336699); /* Sininen liukuväri */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Kyöstin nimi kaunofontilla */
+header h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    margin: 0;
+}
+
+/* Navigointi */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Pääsisältö */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Taustakuvat eri sivuille */
+body.index {
+    background: url('img/etusivu-tausta.jpg') no-repeat center center/cover;
+}
+
+body.gallery {
+    background: url('img/galleria-tausta.jpg') no-repeat center center/cover;
+}
+
+body.history {
+    background: url('img/kisahistoria-tausta.jpg') no-repeat center center/cover;
+}
+
+/* Galleriakuvat */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Taulukko kisahistorialle */
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.history-table th, .history-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.history-table th {
+    background-color: #336699;
+    color: white;
+}
+
+.history-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #003366;
+    color: white;
+    margin-top: 20px;
+}

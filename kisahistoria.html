@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kisahistoria</title>
+    <style>
+        /* Tuodaan kaunokirjoitusfontti Google Fontsista */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6f0ff; /* Vaalea sininen tausta */
+            color: #333;
+        }
+
+        /* Yläpalkki */
+        header {
+            background: linear-gradient(135deg, #003366, #336699); /* Sininen liukuväri */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Kyöstin nimi kaunofontilla */
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        /* Navigointi */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Pääsisältö */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Taustakuvat eri sivuille */
+        body.index {
+            background: url('img/etusivu-tausta.jpg') no-repeat center center/cover;
+        }
+
+        body.gallery {
+            background: url('img/galleria-tausta.jpg') no-repeat center center/cover;
+        }
+
+        body.history {
+            background: url('img/kisahistoria-tausta.jpg') no-repeat center center/cover;
+        }
+
+        /* Taulukko kisahistorialle */
+        .history-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .history-table th, .history-table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .history-table th {
+            background-color: #336699;
+            color: white;
+        }
+
+        .history-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #003366;
+            color: white;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body class="history">
+    <header>
+        <h1>Kisahistoria</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="gallery.html">Galleria</a></li>
+                <li><a href="kisahistoria.html">Kisahistoria</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Rallytoko</h2>
+        <ul>
+            <li>Vantaa 9.2.2025 – Tulos: MESHYV, 96 pistettä</li>
+            <li>Porvoo 8.2.2025 – Tulos: MESHYV, 89 pistettä</li>
+            <li>Hyvinkää 1.2.2025 – Tulos: MESHYV, 92 pistettä</li>
+            <li>Lieko 25.1.2025 – Tulos: MESHYV, 81 pistettä</li>
+            <li>Lohja 18.1.2025 – Tulos: MESHYV, 92 pistettä</li>
+            <li>Salo 19.10.2024 – Tulos: MESHYV, 88 pistettä</li>
+            <li>Raasepori 12.10.2024 – Tulos: MESHYV, 73 pistettä</li>
+            <li>Lohja 1.5.2024 – Tulos: MESHYV, 97 pistettä</li>
+            <li>Loimaa 9.3.2024 – Tulos: MESHYV, 77 pistettä</li>
+            <li>Hyvinkää 17.2.2024 – Tulos: MESHYV, 70 pistettä</li>
+            <li>Vantaa 10.2.2024 – Tulos: MES0</li>
+            <li>Hyvinkää 27.1.2024 – Tulos: MES0</li>
+            <li>Kirkkonummi 23.9.2023 – Tulos: VOIHYV, RTK3, 82 pistettä</li>
+            <li>Raasepori 3.9.2023 – Tulos: VOIHYV, 87 pistettä</li>
+            <li>Porvoo 27.8.2023 – Tulos: VOIHYV, 87 pistettä</li>
+            <li>Lohja 4.3.2023 – Tulos: AVOHYV, RTK2, 95 pistettä</li>
+            <li>Porvoo 25.2.2023 – Tulos: AVOHYV, 96 pistettä</li>
+            <li>Lahti 18.2.2023 – Tulos: AVOHYV, 92 pistettä</li>
+        </ul>
+
+        <h2>Näyttelytulokset</h2>
+        <ul>
+            <li>Helsinki 11.5.2024 (Royal Canin Show) – Tyyppi: Kansainvälinen näyttely, Laatua-arvostelu: AVO-ERI, Sijoitus: AVK2, PU/PN: PU2, Muut merkinnät: SA, SERT, MVA, VARA-CACIB</li>
+            <li>Hämeenlinna 7.10.2023 (Hämeenlinna FCI2, 8, 9, 10) – Tyyppi: Ryhmänäyttely, Laatua-arvostelu: AVO-ERI, Sijoitus: AVK2, Muut merkinnät: SA</li>
+            <li>Porvoo 9.9.2023 (Porvoo KR) – Tyyppi: Kaikkien rotujen näyttely, Laatua-arvostelu: AVO-ERI, Sijoitus: AVK1, PU/PN: PU3, Muut merkinnät: SA, SERT</li>
+            <li>Iitti 19.8.2023 (bullmastiffit ja mastiffit) – Tyyppi: Erikoisnäyttely, Laatua-arvostelu: AVO-ERI, Sijoitus: AVK3</li>
+            <li>Virolahti 17.6.2023 (Kotkan Ruusu KR) – Tyyppi: Kaikkien rotujen näyttely, Laatua-arvostelu: AVO-ERI, Sijoitus: AVK2, PU/PN: PU3, Muut merkinnät: SA, VARA-SERT</li>
+            <li>Helsinki 13.5.2023 (Royal Canin Show) – Tyyppi: Kansainvälinen näyttely, Laatua-arvostelu: AVO-ERI, Sijoitus: AVK1, PU/PN: PU3, Muut merkinnät: SA, SERT</li>
+            <li>Riihimäki 24.9.2022 (Riihimäki KR) – Tyyppi: Kaikkien rotujen näyttely, Laatua-arvostelu: JUN-EH, Sijoitus: JUK3</li>
+            <li>Turku 13.8.2022 (Elonäyttely 2022) – Tyyppi: Kaikkien rotujen näyttely, Laatua-arvostelu: JUN-EH, Sijoitus: JUK2</li>
+            <li>Riihimäki 28.5.2022 (Riihimäki 2 & 5 & 6) – Tyyppi: Ryhmänäyttely, Laatua-arvostelu: JUN-ERI, Sijoitus: JUK3</li>
+            <li>Tuusula 26.5.2022 (Tuusula RN FCI 1/2 & 6/8) – Tyyppi: Ryhmänäyttely, Laatua-arvostelu: JUN-EH, Sijoitus: JUK1</li>
+            <li>Valkeakoski 15.5.2022 (Valkeakoski RN 1/3 & 2) – Tyyppi: Ryhmänäyttely, Laatua-arvostelu: JUN-ERI, Sijoitus: JUK2, PU/PN: PU2, Muut merkinnät: SA, VARA-SERT</li>
+            <li>Helsinki 14.5.2022 (Royal Canin Show) – Tyyppi: Kansainvälinen näyttely, Laatua-arvostelu: JUN-ERI, Sijoitus: JUK3</li>
+            <li>Tampere 1.5.2022 (Werraton Wappu Tampere KV) – Tyyppi: Kansainvälinen näyttely, Laatua-arvostelu: JUN-EH, Sijoitus: JUK2</li>
+            <li>Tampere 30.4.2022 (Werraton Wappu Tampere NORD) – Tyyppi: Nord-näyttely, Laatua-arvostelu: JUN-EH, Sijoitus: JUK4</li>
+            <li>Lahti 26.3.2022 (Lahti KV) – Tyyppi: Kansainvälinen näytt
+

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello I'm Kyösti!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Taustakuva joka skaalautuu automaattisesti näytön mukaan */
+        body.etusivu {
+            background-image: url('images/Kyosti5.jpeg'); /* Taustakuva, voit vaihtaa polun ja nimen */
+            background-size: cover; /* Kuva skaalautuu näyttöön */
+            background-position: center center; /* Keskitetään kuva */
+            background-repeat: no-repeat; /* Ei toistu taustalla */
+            background-attachment: fixed; /* Taustakuva pysyy paikallaan vieritettäessä */
+            margin: 0;
+            padding: 0;
+            padding-top: 100px; /* Lisätty ylimääräinen tila, jotta yläpalkki ei peitä kuvaa */
+        }
+
+        /* Yläpalkki */
+        header {
+            background: linear-gradient(135deg, #003366, #336699); /* Sininen liukuväri */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: absolute; /* Siirretty absoluuttisesti, jotta se ei peitä taustaa */
+            top: 0;
+            width: 100%;
+            z-index: 2; /* Varmistetaan, että yläpalkki on muiden elementtien päällä */
+        }
+
+        header h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            margin: 0;
+        }
+
+        /* Navigointi */
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0 0 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Pääsisältö */
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1; /* Varmistetaan, että pääsisältö tulee yläpalkin alle */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #003366;
+            color: white;
+            margin-top: 50px; /* Siirretty alemmaksi */
+            position: relative; /* Varmistaa, että footer on vain sivun alaosassa */
+        }
+    </style>
+</head>
+<body class="etusivu">
+    <header>
+        <h1>Hello I'm Kyösti!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="gallery.html">Galleria</a></li>
+                <li><a href="kisahistoria.html">Kisahistoria</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Bullforest Urus Mansory</h2>
+        <p>Kyösti s.14.4.2021</p>
+
+        <!-- Instagram link -->
+        <p>Seuraa touhujani Instagramissa: <a href="https://www.instagram.com/helloimkyosti/" target="_blank">@helloimkyosti</a></p>
+
+        <!-- Jalostustiedot link -->
+        <p><a href="https://jalostus.kennelliitto.fi/frmKoira.aspx?RekNo=FI32248%2F21&R=157" target="_blank">Jalostustiedot</a></p>
+    </main>
+    
+</body>
+</html>
+
