@@ -6,44 +6,56 @@
     <title>Hello I'm Kyösti!</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Taustakuva joka skaalautuu automaattisesti näytön mukaan */
-        body.etusivu {
-            background-image: url('images/Kyosti5.jpeg'); /* Taustakuva, voit vaihtaa polun ja nimen */
-            background-size: cover; /* Kuva skaalautuu näyttöön */
-            background-position: center center; /* Keskitetään kuva */
-            background-repeat: no-repeat; /* Ei toistu taustalla */
-            background-attachment: fixed; /* Taustakuva pysyy paikallaan vieritettäessä */
+        /* Resetointi */
+        * {
             margin: 0;
             padding: 0;
-            padding-top: 100px; /* Lisätty ylimääräinen tila, jotta yläpalkki ei peitä kuvaa */
+            box-sizing: border-box;
+        }
+
+        /* Layout, jotta footer pysyy alhaalla */
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Taustakuva */
+        body.etusivu {
+            background: url('images/Kyosti5.jpeg') no-repeat center center;
+            background-size: cover;
+            flex: 1; /* Varmistaa, että footer työntyy sivun pohjalle */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         /* Yläpalkki */
         header {
-            background: linear-gradient(135deg, #003366, #336699); /* Sininen liukuväri */
+            background: linear-gradient(135deg, #003366, #336699);
             color: white;
-            padding: 20px;
+            padding: 15px 20px;
             text-align: center;
-            position: absolute; /* Siirretty absoluuttisesti, jotta se ei peitä taustaa */
-            top: 0;
+            position: fixed;
             width: 100%;
-            z-index: 2; /* Varmistetaan, että yläpalkki on muiden elementtien päällä */
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         header h1 {
             font-family: 'Dancing Script', cursive;
-            font-size: 48px;
-            margin: 0;
+            font-size: 28px;
         }
 
         /* Navigointi */
         nav ul {
             list-style: none;
-            padding: 0;
-            margin: 10px 0 0 0;
             display: flex;
-            justify-content: center;
-            gap: 20px;
+            gap: 15px;
         }
 
         nav ul li {
@@ -53,27 +65,67 @@
         nav ul li a {
             text-decoration: none;
             color: white;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 8px;
+            font-size: 16px;
+            padding: 8px 12px;
+            border-radius: 6px;
             transition: background 0.3s;
         }
 
         nav ul li a:hover {
-            background: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Mobiilinavigaatio */
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                background: rgba(0, 51, 102, 0.9);
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            nav ul li {
+                margin-bottom: 10px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .menu-open nav ul {
+                display: flex;
+            }
         }
 
         /* Pääsisältö */
         main {
             max-width: 800px;
-            margin: 20px auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.9);
             padding: 20px;
+            margin: 120px auto 20px auto;
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            position: relative;
-            z-index: 1; /* Varmistetaan, että pääsisältö tulee yläpalkin alle */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        main h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
         /* Footer */
@@ -82,14 +134,21 @@
             padding: 20px;
             background: #003366;
             color: white;
-            margin-top: 50px; /* Siirretty alemmaksi */
-            position: relative; /* Varmistaa, että footer on vain sivun alaosassa */
+            width: 100%;
+            position: relative;
+            margin-top: auto; /* Työntää footerin alas */
         }
     </style>
+    <script>
+        function toggleMenu() {
+            document.body.classList.toggle('menu-open');
+        }
+    </script>
 </head>
 <body class="etusivu">
     <header>
         <h1>Hello I'm Kyösti!</h1>
+        <span class="menu-toggle" onclick="toggleMenu()">☰</span>
         <nav>
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
@@ -98,17 +157,21 @@
             </ul>
         </nav>
     </header>
+    
     <main>
-        <h2>Bullforest Urus Mansory</h2>
-        <p>Kyösti s.14.4.2021</p>
+        <h2>Kyösti | Bullforest Urus Mansory</h2>
+        <p>s. 14.4.2021</p>
 
-        <!-- Instagram link -->
         <p>Seuraa touhujani Instagramissa: <a href="https://www.instagram.com/helloimkyosti/" target="_blank">@helloimkyosti</a></p>
 
-        <!-- Jalostustiedot link -->
         <p><a href="https://jalostus.kennelliitto.fi/frmKoira.aspx?RekNo=FI32248%2F21&R=157" target="_blank">Jalostustiedot</a></p>
     </main>
-    
+
+    <footer>
+        <p>&copy; 2025 Kyöstin kotisivut</p>
+    </footer>
 </body>
 </html>
+
+
 
